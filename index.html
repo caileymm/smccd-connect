@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+  <title> SMCCD Connect </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lora" rel="stylesheet" type="text/css">
+</head>
+
+<header>
+  <div><img src="smccd.png"> </img></div>
+</header>
+
+<body>
+  <div class="tabs">
+    <div class="tab-link" onclick="openTab('tab1')"> Your Schedule </div>
+    <div class="tab-link" onclick="openTab('tab2')"> Carpool Connect </div>
+  </div>
+
+  <div id="tab1" class="tab">
+    <div class="table-container">
+      <table>
+      <tr>
+        <td> Name </td>
+        <td> 
+          <input type="text" id="name" name="name" style="width: 400px"> 
+        </td>
+      </tr>
+      <tr>
+        <td> SMCCD Email </td>
+        <td> 
+          <input type="text" id="email" name="email" style="width: 400px">
+        </td>
+      </tr>
+      <tr>
+        <td> Driver or Rider? </td>
+        <td> 
+          <select id="driverRider">
+            <option value="driver"> Driver </option>
+            <option value="rider"> Rider </option> 
+          </select>
+        </td>
+      </tr>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <table id="schedule">
+        <tr>
+          <td> Day </td>
+          <td> Destination Time </td>
+          <td> Starting Location (Campus or City) </td>
+          <td> Destination (Campus or City) </td>
+          <td> Course Title (i.e. MATH 251) or Work Title (Optional) </td>
+        </tr>
+        <tr>
+          <td> 
+            <select id="day">
+              <option value="monday"> Monday </option>
+              <option value="tuesday"> Tuesday </option> 
+              <option value="wednesday"> Wednesday </option> 
+              <option value="thursday"> Thursday </option> 
+              <option value="friday"> Friday </option>
+              <option value="saturday"> Saturday </option>
+              <option value="sunday"> Sunday </option>
+            </select>
+          </td>
+          <td> 
+            <select id="hour">
+              <option value="1"> 1 </option>
+              <option value="2"> 2 </option> 
+              <option value="3"> 3 </option> 
+              <option value="4"> 4 </option> 
+              <option value="5"> 5 </option> 
+              <option value="6"> 6 </option> 
+              <option value="7"> 7 </option>
+              <option value="8"> 8 </option> 
+              <option value="9"> 9 </option> 
+              <option value="10"> 10 </option> 
+              <option value="11"> 11 </option> 
+              <option value="12"> 12 </option>
+            </select>
+            <select id="minute">
+              <option value=":00"> :00 </option>
+              <option value=":15"> :15 </option> 
+              <option value=":30"> :30 </option> 
+              <option value=":45"> :45 </option>
+            </select>
+            <select id="AMPM">
+              <option value="AM"> AM </option>
+              <option value="PM"> PM </option> 
+            </select>
+          </td>
+          <td> 
+            <input type="text" id="startingLocation" name="startingLocation"  style="width: 200px">
+          </td>
+          <td> 
+            <input type="text" id="destination" name="destination" style="width: 200px">
+          </td>
+          <td> 
+            <input type="text" id="courseWorkTitle" name="courseWorkTitle" style="width: 200px">
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button class="button-custom" onclick="addRow()"> Add Row </button>
+    <button class="button-custom" onclick="removeRow()"> Remove Row </button>
+    <button class="button-custom" onclick="submit()"> Submit! </button>
+  </div>
+
+  <div id="tab2" class="tab">
+    <div class="table-container">
+      <table>
+        <tr>
+          <td> Rider (Name/Email) </td>
+          <td> Driver (Name/Email) </td>
+          <td> Day </td>
+          <td> Destination Time </td>
+          <td> Starting Location </td>
+          <td> Destination </td>
+          <td> Course/Work Title </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </table>
+    </div>
+    <button class="button-custom" onclick="connect()"> Connect! </button>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>

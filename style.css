@@ -1,0 +1,75 @@
+html {
+  background-color: #fff;
+}
+
+header {
+  font-size: 30px;
+  background-color: rgb(0, 47, 101);
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  line-height: 130px;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.tabs {
+  background-color: #476A91;
+  font-size: 15px;
+  color: #fff;
+  height: 40px;
+  line-height: 35px;
+}
+
+.tab-link {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.tab-link:hover {
+  color: rgb(0, 47, 101);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 1000px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table-container {
+  width: 95%;
+  margin: 20px auto;
+}
+
+.button-custom {
+  background-color: rgb(0, 47, 101);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.button-custom:hover {
+  background-color: #476A91;
+}
+
+input {
+  border: none;
+  text-align: center; 
+}
